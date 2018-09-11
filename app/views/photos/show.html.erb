@@ -1,0 +1,51 @@
+<h1>Photos#show</h1>
+<p>Find me in app/views/photos/show.html.erb</p>
+<h2>タイトル</h2>
+<p><%= @photo.body %></p>
+<h2>画像</h2>
+<div  class="aaa">
+	<div class=bbb>
+		<div class='slider-for'>
+				<%= attachment_image_tag @photo, :a_image, :fill, 100, 100, format: 'jpg' %>
+				<%= attachment_image_tag @photo, :b_image, :fill, 100, 100, format: 'jpg' %>
+				<%= attachment_image_tag @photo, :c_image, :fill, 100, 100, format: 'jpg' %>
+				<%= attachment_image_tag @photo, :d_image, :fill, 100, 100, format: 'jpg' %>
+				<%= attachment_image_tag @photo, :e_image, :fill, 100, 100, format: 'jpg' %>
+				<%= attachment_image_tag @photo, :f_image, :fill, 100, 100, format: 'jpg' %>
+		</div>
+	</div>
+
+	<div class='slider-nav'>
+		<!-- <ul class="thumb"> -->
+			<%= attachment_image_tag @photo, :a_image, :fill, 300, 300, format: 'jpg' %>
+			<%= attachment_image_tag @photo, :b_image, :fill, 300, 300, format: 'jpg' %>
+			<%= attachment_image_tag @photo, :c_image, :fill, 300, 300, format: 'jpg' %>
+			<%= attachment_image_tag @photo, :d_image, :fill, 300, 300, format: 'jpg' %>
+			<%= attachment_image_tag @photo, :e_image, :fill, 300, 300, format: 'jpg' %>
+			<%= attachment_image_tag @photo, :f_image, :fill, 300, 300, format: 'jpg' %>
+		<!-- </ul> -->
+	</div>
+</div>
+<!-- 
+<ul class="slider">
+    <li><a href="#"><img src="images/01.jpg" alt="image01"></a></li>
+    <li><a href="#"><img src="images/02.jpg" alt="image02"></a></li>
+    <li><a href="#"><img src="images/03.jpg" alt="image03"></a></li>
+    <li><a href="#"><img src="images/04.jpg" alt="image04"></a></li>
+    <li><a href="#"><img src="images/05.jpg" alt="image05"></a></li>
+    <li><a href="#"><img src="images/06.jpg" alt="image06"></a></li>
+    <li><a href="#"><img src="images/07.jpg" alt="image07"></a></li>
+    <li><a href="#"><img src="images/08.jpg" alt="image08"></a></li>
+</ul>
+<ul class="thumb">
+    <li><a href="#"><img src="images/01.jpg" alt="image01"></a></li>
+    <li><a href="#"><img src="images/02.jpg" alt="image02"></a></li>
+    <li><a href="#"><img src="images/03.jpg" alt="image03"></a></li>
+    <li><a href="#"><img src="images/04.jpg" alt="image04"></a></li>
+    <li><a href="#"><img src="images/05.jpg" alt="image05"></a></li>
+    <li><a href="#"><img src="images/06.jpg" alt="image06"></a></li>
+    <li><a href="#"><img src="images/07.jpg" alt="image07"></a></li>
+    <li><a href="#"><img src="images/08.jpg" alt="image08"></a></li>
+</ul> -->
+ 
+<%= link_to "編集", edit_photo_path(@photo) %>

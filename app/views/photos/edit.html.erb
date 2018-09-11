@@ -1,0 +1,15 @@
+<h1>Photos#edit</h1>
+<p>Find me in app/views/photos/edit.html.erb</p>
+<h1>編集画面</h1>
+<%= form_for(@photo) do |f| %>
+    <h4>タイトル</h4>
+    <%= f.text_area :body %>
+    <h4>画像</h4>
+  <%= f.attachment_field :a_image%>
+  <%= f.attachment_field :b_image%>
+  <%= f.attachment_field :c_image%>
+  <%= f.attachment_field :d_image%>
+  <%= f.attachment_field :e_image%>
+  <%= f.attachment_field :f_image%>
+    <%= f.submit '保存' %>    
+<% end %>

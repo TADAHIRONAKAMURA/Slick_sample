@@ -1,0 +1,18 @@
+<h1>Photos#index</h1>
+<p>Find me in app/views/photos/index.html.erb</p>
+<h1>投稿一覧</h1>
+<% @photos.each do |photo| %>
+  <p>タイトル</p>
+  <span>
+    <%=link_to photo.body, photo_path(photo.id) %>
+  </span>
+  <p>画像</p>
+  <!-- <div class='a'> -->
+  <%= attachment_image_tag photo, :a_image, :fill, 100, 100, format: 'jpeg' %>
+  <%= attachment_image_tag photo, :b_image, :fill, 100, 100, format: 'jpeg' %>
+  <%= attachment_image_tag photo, :c_image, :fill, 100, 100, format: 'jpeg' %>
+  <%= attachment_image_tag photo, :d_image, :fill, 100, 100, format: 'jpeg' %>
+  <%= attachment_image_tag photo, :e_image, :fill, 100, 100, format: 'jpeg' %>
+  <%= attachment_image_tag photo, :f_image, :fill, 100, 100, format: 'jpeg' %>
+<!-- </div> -->
+<% end %>
